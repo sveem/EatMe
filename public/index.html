@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html ng-app='EatMe'>
+<html ng-app="EatMe">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+  <!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+   <!--  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>EatMe</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
-  <body>
-    <h1>EatMe</h1>
+  <body id="main-container">
+    <h1>Eat<i>Me</i></h1>
 
-    <script src="./app.js"></script>
+    <div class="main-search-form" ng-controller="MainController">
+
+      <label>
+        <select ng-model="food">
+
+          <option value="">---Enter your favourite Food---</option>
+        </select>
+      </label>
+
+      <label>
+        <input placeholder="Enter a City" type="text" name="city" ng-model="city" />
+      </label>
+
+      <button>EatMe</button>
+
+
+      <table class="main table with results">
+        <tbody>
+            <tr>
+              <td><img src="{{image}}"/>{{ city }} {{ address }} {{ name}}</td>
+              <td></td>
+              <td></td>>
+           </tr>>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+
+    <script src="app.js"></script>
   </body>
 </html>
