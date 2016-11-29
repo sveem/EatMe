@@ -3,6 +3,7 @@
 
 .controller('MainController', function($scope, $http) {
    $scope.data = {};
+   
    $scope.printCity = function (city) {
   	console.log("++++++++++++++++++++++++++++++++++CITY>", $scope.data.city)
     return $http({

@@ -19,7 +19,8 @@ var client = new Yelp({
 
  function yelpData(req, res, city = "London", food = "pizza") {
  	console.log("REQUEST+++++++++:", req.body)
-  return client.search({ term: req.body.food, location: req.body.city, limit: 10 }) //req.body.value
+  req.body.limit = req.body.limit || 10;
+  return client.search({ term: req.body.food, location: req.body.city, limit: req.body.limit }) //req.body.value
   .then(function (data) {
     // console.log("+++++++++++++++++DA++++TA", data )
      return data;

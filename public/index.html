@@ -14,7 +14,7 @@
       <label>
         <input placeholder="City" type="text" name="city" ng-model="data.city" />
       </label>
-        <input placeholder="enter your number" type="text" ng-model="data.searchQuery"/>
+        <input placeholder="10" class="search-number" type="text" ng-model="data.limit"/>
       <button ng-click="printCity()">EatMe</button>
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
