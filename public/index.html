@@ -17,11 +17,11 @@
 
       <button ng-click="printCity()" >EatMe</button>
 
-      <table ng-repeat="business in data"class="main table with results">
+      <table ng-repeat="business in data.businesses" class="main table with results">
         <tbody>
             <tr>
-              <td><img src="{{image}}"/>{{ city }} {{ address }} {{ name}}</td>
-              <td><img src="{{image1}}"/> {{ city1 }} {{ address1 }} {{ name1 }}</td>
+              <td><img src="{{business.image_url}}"/> {{ business.location.city }} {{ businesses.location.address }} {{ business.name }}</td>
+               <!-- <td><img src="{{business.image_url}}"/> {{ business.location.city }} {{ businesses.location.address }} {{ business.name }}</td> -->
               <td></td>
            </tr>
         </tbody>

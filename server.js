@@ -2,15 +2,27 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var morgan = require('morgan');
-var router = require("./router.js");
+// var router = require("./router.js");
 var app = express();
+var yelpAPICall = require('./food');
+
 
 app.use(express.static(__dirname + '/public')); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
-app.use("/",router);
+// app.use("/",router);
 
+app.post('/api/food', function(req, res) {
+	yelpAPICall.search({ term: req.body.food, location: req.body.city, sort: 2, limit: 2})
+  	.then(function (data) {
+    	console.log("+++++++++++++++++DA++++TA", data)
+     	res.send(data);
+  	})
+  	.catch(function (err) {
+  		console.error("ERROR", err);
+  	});
+});
 app.get('/*', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });

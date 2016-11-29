@@ -1,10 +1,11 @@
-var router = require("express").Router();
+// var router = require("express").Router();
 // var cors = require("cors");
 var request = require("request");
-var express = require('express');
+// var express = require('express');
 // var qs = require('querystring');  
 var Yelp = require("yelp");
-var app = express();
+
+
 
 var client = new Yelp({
   consumer_key: "yWoYa1PCjCU9yHgkQvlDwg",
@@ -13,12 +14,12 @@ var client = new Yelp({
   token_secret: "I7bN5Vc8ir4wAYEkm0NyX9rkjiI"
 });
 
- function yelpData(req, res) {
- 	console.log("REQUEST+++++++++:", req.body.food)
-  return client.search({ term: req.body.food, location: req.body.city, sort: 2, limit: 2 }) //req.body.value
+ function yelpData(req, res, city = "London", food = "pizza") {
+ 	console.log("REQUEST+++++++++:", req.body)
+  return client.search({ term: 'pizza', location: 'London', sort: 2, limit: 10 }) //req.body.value
   .then(function (data) {
     console.log("+++++++++++++++++DA++++TA", data )
-    res.send(data);
+     return data;
   })
   .catch(function (err) {
   console.error("ERROR", err);
@@ -44,5 +45,6 @@ var client = new Yelp({
 // }
 
 module.exports = {
-	getData: yelpData
+	search: yelpData,
+	client: client
 }
