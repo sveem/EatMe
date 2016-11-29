@@ -12,6 +12,11 @@ var client = new Yelp({
   token_secret: "I7bN5Vc8ir4wAYEkm0NyX9rkjiI"
 });
 
+ // var randomNumber = function() {
+ // var random = Math.floor(Math.random() * 20)+ 10;
+ //   return random;
+ // };
+
  function yelpData(req, res, city = "London", food = "pizza") {
  	console.log("REQUEST+++++++++:", req.body)
   return client.search({ term: req.body.food, location: req.body.city, limit: 10 }) //req.body.value

@@ -2,24 +2,24 @@
 <html ng-app="EatMe">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" type="text/css" href="styles.css">
     <title>EatMe</title>
   </head>
   <body id="main-container">
     <h1>Eat<i>Me</i></h1>
     <div class="search-form" ng-controller="MainController">
       <label>
-          <input placeholder="Enter your favourite food" type="text" name="food" ng-model="data.food" />
+        <input placeholder="tacos, bars, clubs" type="text" name="food" ng-model="data.food" />
       </label>
       <label>
-        <input placeholder="Enter a City" type="text" name="city" ng-model="data.city" />
+        <input placeholder="City" type="text" name="city" ng-model="data.city" />
       </label>
-
+        <input placeholder="enter your number" type="text" ng-model="data.searchQuery"/>
       <button ng-click="printCity()">EatMe</button>
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
         <div class="inside-wrapper">      
-          <div class="title">{{business.name}}</div>
+          <div class="title"> {{ business.name }}</div>
             <div class="address">{{ business.location.address.join(', ') }}</div>
              <div class="dataImg">
                 <a href="{{ business.url }} _blank">
@@ -34,7 +34,6 @@
         </div>
       </div>
     </div>
-
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
     <script src="app.js"></script>
   </body>
