@@ -13,17 +13,21 @@ var client = new Yelp({
   token_secret: "I7bN5Vc8ir4wAYEkm0NyX9rkjiI"
 });
 
- function getTest(req, res) {
-  return client.search({ term: 'pizza', location: 'Manhattan' })
+ function yelpData(req, res) {
+ 	console.log("REQUEST+++++++++:", req.body.food)
+  return client.search({ term: req.body.food, location: req.body.city, sort: 2, limit: 2 }) //req.body.value
   .then(function (data) {
-    console.log("+++++++++++++++++", data )
-    return data;
+    console.log("+++++++++++++++++DA++++TA", data )
+    res.send(data);
   })
   .catch(function (err) {
   console.error("ERROR", err);
   });
 }
 
+// function bob() {
+//   return "burger";
+// }
 
 // function getFoodPlaces(req,res) {
 //   client.search({
@@ -40,5 +44,5 @@ var client = new Yelp({
 // }
 
 module.exports = {
-	test: getTest
+	getData: yelpData
 }
