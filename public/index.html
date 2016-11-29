@@ -20,8 +20,10 @@
       <table ng-repeat="business in data.businesses" class="main table with results">
         <tbody>
             <tr>
-              <td><img src="{{business.image_url}}"/> {{ business.location.city }} {{ businesses.location.address }} {{ business.name }}</td>
-               <!-- <td><img src="{{business.image_url}}"/> {{ business.location.city }} {{ businesses.location.address }} {{ business.name }}</td> -->
+              
+              <td>{{ business.location.city }}</td>
+              <td><img src="{{business.image_url}}"/>  {{ businesses.location.address }} {{ business.name }}</td>
+              <img src="{{ business.rating_img_url}}"/>
               <td></td>
            </tr>
         </tbody>
@@ -38,7 +40,8 @@
 
 
 
-
+//no tables => div tags
+//div wrapper => image, 
 
 
 

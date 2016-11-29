@@ -1,7 +1,7 @@
 
 var router = require('express').Router();
 
-var food = require('./food');
+
 
 router.get('/api/food', function(req, res) {
   food.getData(req, res)
@@ -10,6 +10,6 @@ router.get('/api/food', function(req, res) {
 });
 	// res.send(food.test());
 });
-router.post('/api/food', food.getData);
+
 
 module.exports = router;

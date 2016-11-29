@@ -13,16 +13,19 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
 // app.use("/",router);
 
+
 app.post('/api/food', function(req, res) {
-	yelpAPICall.search({ term: req.body.food, location: req.body.city, sort: 2, limit: 2})
+	console.log("REQ.BODY", req.body)
+	yelpAPICall.search(req)
   	.then(function (data) {
-    	console.log("+++++++++++++++++DA++++TA", data)
+    	// console.log("+++++++++++++++++DA++++TA", data)
      	res.send(data);
   	})
   	.catch(function (err) {
   		console.error("ERROR", err);
   	});
 });
+
 app.get('/*', function(req, res) {
   res.sendFile(__dirname + '/public/index.html');
 });

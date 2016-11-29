@@ -16,9 +16,9 @@ var client = new Yelp({
 
  function yelpData(req, res, city = "London", food = "pizza") {
  	console.log("REQUEST+++++++++:", req.body)
-  return client.search({ term: 'pizza', location: 'London', sort: 2, limit: 10 }) //req.body.value
+  return client.search({ term: req.body.food, location: req.body.city, sort: 2, limit: 10 }) //req.body.value
   .then(function (data) {
-    console.log("+++++++++++++++++DA++++TA", data )
+    // console.log("+++++++++++++++++DA++++TA", data )
      return data;
   })
   .catch(function (err) {
@@ -26,23 +26,6 @@ var client = new Yelp({
   });
 }
 
-// function bob() {
-//   return "burger";
-// }
-
-// function getFoodPlaces(req,res) {
-//   client.search({
-//     term: req.body.food,
-//     location:'Manhattan', 
-//     sort: 2, 
-//     limit: 10 })
-//   .then(function(data) {
-//     res.send(data.businesses);
-//   })
-//   .catch(function(err) {
-//   console.error(err);
-//   });
-// }
 
 module.exports = {
 	search: yelpData,
