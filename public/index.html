@@ -17,7 +17,7 @@
         <input placeholder="10" class="search-number" type="text" ng-model="data.limit"/>
       <button ng-click="printCity()">YelpMe</button>
       <button ng-click="bookMark()">Bookmarks</button>
-       <label for="repeatSelect">Results</label>
+       <label for="repeatSelect"></label>
          <select name="repeatSelect" id="repeatSelect" ng-model="storage">
             <option ng-repeat="option in storage">{{ option.city}} {{ option.food}}</option>
         </select>
