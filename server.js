@@ -6,7 +6,7 @@ var morgan = require('morgan');
 var app = express();
 var yelpAPICall = require('./food');
 
-
+var port = 3000;
 app.use(express.static(__dirname + '/public')); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,6 +31,5 @@ app.get('/*', function(req, res) {
 });
 
 //I have to fix this part before deployment!
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(process.env.PORT || 3000);
+console.log("Server now listening on port" + " " + port +  "!");

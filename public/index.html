@@ -19,23 +19,20 @@
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
         <div class="inside-wrapper">      
-          <div class="title">{{business.name}} Hello {{ business.location.address.join(', ') }}
-          </div>
-          <div>
+          <div class="title">{{business.name}}</div>
+            <div class="address">{{ business.location.address.join(', ') }}</div>
              <div class="dataImg">
-              <a href="{{ business.url }} _blank">
-              <img src="{{business.image_url}}"/>  
-              </a>
-              </div>
-                <div class="info"> {{ business.snippet_text}}
-                </div>
-                <div class="ratingUrl">
+                <a href="{{ business.url }} _blank">
+                  <img src="{{business.image_url}}"/>  
+                </a>
+             </div>
+                <div class="info"> {{ business.snippet_text}}</div>
+              <div class="ratingUrl">
                 <img src="{{ business.rating_img_url}}"/> 
-                </div>
-           </div>  
+              </div>
+           </div>
         </div>
       </div>
-    </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
