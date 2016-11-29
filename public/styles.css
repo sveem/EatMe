@@ -21,15 +21,15 @@ body {
 
 
 img {
-    width: 15%;
+    width: 10%;
     height: auto;
 
 }
 
-.mainImage {
-  min-height: 100px;
-  min-width: 100px 
-}
+/*.mainImage {
+  min-height: 50px;
+  min-width: 50px 
+}*/
 
 label {
   width: 40%;
@@ -37,7 +37,6 @@ label {
   margin: 0 auto;
   margin-right: 10px;
 }
-
 
 .inside-wrapper {
   font-size: 20px;
@@ -49,13 +48,18 @@ font-size: 30px;
 
 .info {
    font-size: 24px;
+/*   border-style: none*/
 }
 
 .data{
 /*  display: inline-block;*/
 float: left
+
 }
 
+/*.ratingUrl {
+  size: 20px;
+}*/
 .search-form select {
   font-size: 24px;
 }
@@ -82,7 +86,7 @@ float: left
   margin-top: 20px;
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 20px;
   table-layout: fixed;
   background: #fff;
 }
@@ -90,10 +94,11 @@ float: left
 .wrapper div,
 .wrapper div,
 .wrapper div {
-  border: 1px solid black;
+/*  border: 1px solid red;*/
+ border-style: none
 }
-
+/*
 .wrapper div,
 .wrapper div {
-  padding: 5px 10px;
-}
+padding: 5px 10px;
+}*/

@@ -18,19 +18,22 @@
       <button ng-click="printCity()">EatMe</button>
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
-      <!--   <div class="inside-wrapper">   -->    
-          <!--   <div class="location">{{ business.location.city }}</div> -->
-          <div class="title">Address {{business.name}}</div>>
-         <!--   <div>{{ business.name }} -->
-        <div>
-             <div class="data">
-              <img class="mainImage" src="{{business.image_url}}"/>  
+        <div class="inside-wrapper">      
+          <div class="title">{{business.name}} Hello {{ business.location.address.join(', ') }}
+          </div>
+          <div>
+             <div class="dataImg">
+              <a href="{{ business.url }} _blank">
+              <img src="{{business.image_url}}"/>  
+              </a>
               </div>
-                <div class="info">{{ business.location.address.join(', ') }} {{ business.snippet_text}}
+                <div class="info"> {{ business.snippet_text}}
                 </div>
-                <img src="{{ business.rating_img_url_large}}"/> 
-        </div>  
-      <!--   </div> -->
+                <div class="ratingUrl">
+                <img src="{{ business.rating_img_url}}"/> 
+                </div>
+           </div>  
+        </div>
       </div>
     </div>
     </div>
@@ -39,15 +42,6 @@
     <script src="app.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-//no tables => div tags
-//div wrapper => image, 
-
 
 
 
