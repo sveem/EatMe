@@ -7,7 +7,7 @@
   </head>
   <body id="main-container">
     <h1>Eat<i>Me</i></h1>
-    <div class="main-search-form" ng-controller="MainController">
+    <div class="search-form" ng-controller="MainController">
       <label>
           <input placeholder="Enter your favourite food" type="text" name="food" ng-model="data.food" />
       </label>
@@ -15,19 +15,24 @@
         <input placeholder="Enter a City" type="text" name="city" ng-model="data.city" />
       </label>
 
-      <button ng-click="printCity()" >EatMe</button>
-
-      <table ng-repeat="business in data.businesses" class="main table with results">
-        <tbody>
-            <tr>
-              
-              <td>{{ business.location.city }}</td>
-              <td><img src="{{business.image_url}}"/>  {{ businesses.location.address }} {{ business.name }}</td>
-              <img src="{{ business.rating_img_url}}"/>
-              <td></td>
-           </tr>
-        </tbody>
-      </table>
+      <button ng-click="printCity()">EatMe</button>
+    <div class="wrapper">
+      <div ng-repeat="business in data.businesses" class="table">
+      <!--   <div class="inside-wrapper">   -->    
+          <!--   <div class="location">{{ business.location.city }}</div> -->
+          <div class="title">Address {{business.name}}</div>>
+         <!--   <div>{{ business.name }} -->
+        <div>
+             <div class="data">
+              <img class="mainImage" src="{{business.image_url}}"/>  
+              </div>
+                <div class="info">{{ business.location.address.join(', ') }} {{ business.snippet_text}}
+                </div>
+                <img src="{{ business.rating_img_url_large}}"/> 
+        </div>  
+      <!--   </div> -->
+      </div>
+    </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
@@ -47,25 +52,3 @@
 
 
 
-
-<!--  <button ng-click="findGroup(zipcode, selected)">Meetup!</button>
-
-      <!-- GROUP SEARCH RESULTS TABLE -->
- <!--      <table class="main-search-table" ng-hide="groupTable">
-        <thead>
-          <th>Group Name</th>
-          <th>Group Members</th>
-          <th>Description</th>
-        </thead>
-        <tbody>
-          <tr ng-repeat="group in groups.results">
-            <td><a href="{{ group.link }}" target="_blank">{{ group.name}}</a></td>
-            <td>{{ group.members }}</td>
-            <td>{{ group.description }}</td>
-             <td><a href="{{ group.link }}" target="_blank">{{ group1.name}}</a></td>
-            <td>{{ group1.members }}</td>
-            <td>{{ group1.description }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div> --> -->
