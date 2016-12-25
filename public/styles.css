@@ -1,5 +1,5 @@
 body {
-  font-size: 34px;
+ /* font-size: 34px;*/
   font-family: Helvetica, Arial, Sans-Serif;
 }
 
@@ -15,14 +15,11 @@ body {
   background: #ed1c40;
 }
 
-img {
+/*img {
     width: 15% ;
     height: auto
-}
-/*
-.dataImg {
-  float: left;
 }*/
+
 /*.mainImage {
   min-height: 50px;
   min-width: 50px 
@@ -34,25 +31,37 @@ label {
   margin: 0 auto;
   margin-right: 10px;
 }
-
+/*
 .inside-wrapper {
   font-size: 20px;
+}*/
+
+/*.title {
+font-size: 20px;
+position: relative;
+right: 300px;
+}*/
+
+/*.address {
+*//*  font-size: 20px; 
+  right:300px; */  
+/*}*/
+
+
+.dataImg {
+  float:left;
+  margin: 0 0 0 10px;
+
 }
 
-.title {
-font-size: 30px;
-}
 
-.address {
-  font-size: 20px;    
-}
-.info {
+/*.info {
   font-size: 24px;
-}
+}*/
 
-.ratingUrl {
+/*.ratingUrl {
   size: 10px;
-}
+}*/
 .search-form select {
   font-size: 24px;
 }
@@ -88,7 +97,7 @@ font-size: 30px;
   margin-top: 20px;
   border-collapse: collapse;
   width: 100%;
-  font-size: 20px;
+  font-size: 30px;
   table-layout: fixed;
   background: #fff;
 }

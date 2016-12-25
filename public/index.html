@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="styles.css">
+      <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css"> -->
     <title>YelpMe</title>
   </head>
   <body id="main-container">
@@ -25,21 +26,21 @@
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
         <div class="inside-wrapper">      
-          <div class="title"> {{ business.name }}</div>
-            <div class="address">{{ business.location.address.join(', ') }}</div>
-             <div class="dataImg">
+          <span class="title"> {{ business.name }}</span>
+            <span class="address">{{ business.location.address.join(', ') }}</span>
+             <span class="dataImg">
                 <a href="{{ business.url }} _blank">
                   <img src="{{business.image_url}}"/>  
                 </a>
-             </div>
+             </span>
                 <div class="info"> {{ business.snippet_text}}</div>
               <div class="ratingUrl">
                 <img src="{{ business.rating_img_url}}"/> 
               </div>
-           </div>
-        </div>
-      </div>
-    </div>
+           </div>  <!--inside-wrapper -->
+        </div> <!-- ng-repeat='business in data.businesses' <-->
+      </div> <!--  class="wrapper"-->
+    </div> <!-- class "search form"-->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
     <script src="app.js"></script>
   </body>
