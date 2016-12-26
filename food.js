@@ -2,35 +2,36 @@
 // var cors = require("cors");
 // var express = require('express');
 // var qs = require('querystring');
-var request = require("request");  
-var Yelp = require("yelp");
+const request = require('request');  
+const Yelp = require('yelp');
+const consumerKey = process.env.Consumer_Key;
+const consumerSecret = process.env.Consumer_Secret;
+const tokenId = process.env.Token;
+const tokenSecret = process.env.Token_Secret;
 
-var client = new Yelp({
-  consumer_key: "yWoYa1PCjCU9yHgkQvlDwg",
-  consumer_secret: "iQjJlkpOce38RQSENGnlH7ziv_Q",
-  token: "QpNUIhpHtW9A8qkeWjgiMDzoXXyL6pmP",
-  token_secret: "I7bN5Vc8ir4wAYEkm0NyX9rkjiI"
+let client = new Yelp({
+  consumer_key: consumerKey,
+  consumer_secret: consumerSecret,
+  token: tokenId,
+  token_secret: tokenSecret
 });
 
- // var randomNumber = function() {
- // var random = Math.floor(Math.random() * 20)+ 10;
- //   return random;
- // };
-
- function yelpData(req, res, city = "London", food = "pizza") {
- 	console.log("REQUEST+++++++++:", req.body)
+yelpData = (req, res, city = 'London', food = 'pizza') => {
   req.body.limit = req.body.limit || 10;
-  return client.search({ term: req.body.food, location: req.body.city, limit: req.body.limit }) //req.body.value
-  .then(function (data) {
-    // console.log("+++++++++++++++++DA++++TA", data )
-     return data;
+  return client.search({ 
+    term: req.body.food, 
+    location: req.body.city, 
+    limit: req.body.limit 
   })
-  .catch(function (err) {
-  console.error("ERROR", err);
+  .then(data => {
+    return data;
+  })
+  .catch(error => {
+    console.error('ERROR', error);
   });
-}
+};
 
 module.exports = {
-	search: yelpData,
-	client: client
-}
+  search: yelpData,
+  client: client
+};
