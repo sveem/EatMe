@@ -15,54 +15,36 @@ body {
   background: #ed1c40;
 }
 
-/*img {
-    width: 15% ;
-    height: auto
-}*/
-
-/*.mainImage {
-  min-height: 50px;
-  min-width: 50px 
-}*/
-
 label {
   width: 40%;
   padding: 16px 8px;
   margin: 0 auto;
   margin-right: 10px;
 }
-/*
-.inside-wrapper {
-  font-size: 20px;
-}*/
 
-/*.title {
-font-size: 20px;
-position: relative;
-right: 300px;
-}*/
-
-/*.address {
-*//*  font-size: 20px; 
-  right:300px; */  
-/*}*/
+.title {
+margin: 5px 0 0 0;
+}
 
 
 .dataImg {
   float:left;
-  margin: 5px 0 15px 0 ;
-/*  width: 10%;*/
- 
+  margin: 5px 0 0 0 ;
+  margin-bottom: 10px;
+  height: 100px;
+  width: auto;
 }
+
+
 
 .info {
   margin-top:5px;
+  margin-left: 20px;
+  text-align: justify;
   text-align-last: left;
+
 }
 
-/*.ratingUrl {
-  size: 10px;
-}*/
 .search-form select {
   font-size: 24px;
 }
@@ -113,4 +95,4 @@ right: 300px;
 .wrapper div,
 .wrapper div {
 padding: 5px 10px;
-}*/
+}
