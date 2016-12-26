@@ -1,35 +1,29 @@
 require('dotenv').config();
-var express = require('express');
-var bodyParser = require('body-parser');
-var request = require('request');
-// var router = require("./router.js");
-var app = express();
-var yelpAPICall = require('./food');
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const app = express();
+const yelpAPICall = require('./food');
 
-var port = 3000;
+const port = 3000;
+
 app.use(express.static(__dirname + '/public')); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-// app.use("/",router);
 
-
-app.post('/api/food', function(req, res) {
-	console.log("REQ.BODY", req.body)
-	yelpAPICall.search(req)
-  	.then(function (data) {
-    	// console.log("+++++++++++++++++DA++++TA", data)
-     	res.send(data);
-  	})
-  	.catch(function (err) {
-  		console.error("ERROR", err);
-  	});
+app.post('/api/food', (req, res) => {
+  yelpAPICall.search(req)
+  .then((data) => {
+    res.send(data);
+  })
+  .catch((error) => {
+    console.error('ERROR', error);
+  });
 });
 
-app.get('/*', function(req, res) {
+app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-//I have to fix this part before deployment!
-
 app.listen(process.env.PORT || 3000);
-console.log("Server now listening on port" + " " + port +  "!");
+console.log('Server now listening on port' + ' ' + port +  "!");

@@ -4,10 +4,10 @@
 // var qs = require('querystring');
 const request = require('request');  
 const Yelp = require('yelp');
-const consumerKey = process.env.Consumer_Key;
-const consumerSecret = process.env.Consumer_Secret;
-const tokenId = process.env.Token;
-const tokenSecret = process.env.Token_Secret;
+const consumerKey = process.env.CONSUMER_KEY;
+const consumerSecret = process.env.CONSUMER_SECRET;
+const tokenId = process.env.TOKEN;
+const tokenSecret = process.env.TOKEN_SECRET;
 
 let client = new Yelp({
   consumer_key: consumerKey,
