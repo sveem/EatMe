@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const app = express();
-const yelpAPICall = require('./food');
+const yelpAPICall = require('./yelpController');
 
 const port = 3000;
 

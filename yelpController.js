@@ -1,7 +1,3 @@
-// var router = require("express").Router();
-// var cors = require("cors");
-// var express = require('express');
-// var qs = require('querystring');
 const request = require('request');  
 const Yelp = require('yelp');
 const consumerKey = process.env.CONSUMER_KEY;
