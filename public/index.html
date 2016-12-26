@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
   </head>
   <body id="main-container">
     <h1>Yelp<i>Me</i></h1>
@@ -14,11 +15,11 @@
         <input placeholder="City" type="text" name="city" ng-model="data.city" />
       </label>
       <input placeholder="10" class="search-number" type="text" ng-model="data.limit"/>
-    <button ng-click="printCity()">YelpMe</button>
-    <button ng-click="bookMark()">Bookmarks</button>
+    <button ng-click="apiCall()">YelpMe</button>
+    <button ng-click="addToBookMarks()">Bookmarks</button>
     <label for="repeatSelect"></label>
     <select name="repeatSelect" id="repeatSelect" ng-model="storage">
-    <option ng-repeat="option in storage">{{ option.city}} {{ option.food}}</option>
+    <option ng-repeat="option in storage">{{ option.food}}, {{ option.city}}</option>
     </select>
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
@@ -34,7 +35,6 @@
       </div> <!-- ng-repeat='business in data.businesses' <-->
     </div> <!--  "wrapper"-->
     </div> <!-- "search form"-->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
