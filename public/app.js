@@ -1,7 +1,7 @@
  angular.module('YelpMe', []) 
 
 
-.controller('MainController', function($scope, $http) {
+.controller('MainController', function($scope, $http, $timeout) {
    $scope.data = {};
    $scope.storage = [];
    // $scope.bookMarks = {};
@@ -17,10 +17,13 @@
        console.log("RETURNEDDATA",returnedData)
        $scope.data.businesses = returnedData.data.businesses;
        // var parsedData = JSON.parse(returnedData)
+
        return returnedData;
     });
   };
 
+
+  
      $scope.bookMark = function() {
     
     if($scope.data.food === undefined && $scope.data.city === undefined) {

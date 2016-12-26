@@ -50,14 +50,15 @@ right: 300px;
 
 .dataImg {
   float:left;
-  margin: 0 0 0 10px;
-
+  margin: 5px 0 15px 0 ;
+/*  width: 10%;*/
+ 
 }
 
-
-/*.info {
-  font-size: 24px;
-}*/
+.info {
+  margin-top:5px;
+  text-align-last: left;
+}
 
 /*.ratingUrl {
   size: 10px;
@@ -86,11 +87,11 @@ right: 300px;
 
 .search-form .search-number {
   font-size: 24px;
-    width: 25px;
-    height: 25px;
-    border: 1px solid black;
-    border-radius: 15px;
-    padding:18px 27px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding:18px 27px;
 }
 
 .wrapper{
