@@ -2,7 +2,7 @@
 M.V.P. (**M**inimum **V**iable **P**roduct) Project - A 36-hour hack-a-thon building a fullstack web application from scratch.
 
 ## What Does it Do?
-This SPA web application let's the end user enter a search term and a city and display the results using Yelp's 2.0 public API.
+This SPA web application lets the end user enter a search term and a city and display the results using Yelp's 2.0 public API.
 The end user is able to display number of search results between 1-20 and to add them as bookmarks.
 
 ## Tech Stack
