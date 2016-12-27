@@ -8,7 +8,7 @@ The end user is able to display number of search results between 1-20 and to add
 ## Tech Stack
 * Front End: AngularJS
 * Back End: Node.js and Express.js
-* External: Meetup's Public API
+* External: Yelp's 2.0 API
 
 ### View Deployed Application
 See it here on [Heroku] 
