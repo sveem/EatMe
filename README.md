@@ -1,4 +1,4 @@
-YelpMe
+YelpMe App
 
 M.V.P. (Minimum Viable Product) Project - A 36-hour hack-a-thon building a fullstack web application from scratch.
 
