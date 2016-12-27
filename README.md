@@ -1,4 +1,4 @@
-# MeetupToGo
+# YelpMe
 M.V.P. (**M**inimum **V**iable **P**roduct) Project - A 36-hour hack-a-thon building a fullstack web application from scratch.
 
 ## What Does it Do?
