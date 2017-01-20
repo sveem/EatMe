@@ -11,7 +11,7 @@ The end user is able to display number of search results between 1-20 and to add
 * External: Meetup's Public API
 
 ### View Deployed Application
-See it here on [Heroku] 
+See it here on [Heroku](https://goodeats-dev.herokuapp.com/) 
 
 ### Install to your Local
 Clone it from GitHub!
