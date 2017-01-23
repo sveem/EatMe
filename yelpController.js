@@ -1,9 +1,9 @@
 const request = require('request');  
 const Yelp = require('yelp');
-const consumerKey = process.env.CONSUMER_KEY;
-const consumerSecret = process.env.CONSUMER_SECRET;
-const tokenId = process.env.TOKEN;
-const tokenSecret = process.env.TOKEN_SECRET;
+const consumerKey = "yWoYa1PCjCU9yHgkQvlDwg";
+const consumerSecret = "iQjJlkpOce38RQSENGnlH7ziv_Q";
+const tokenId = "QpNUIhpHtW9A8qkeWjgiMDzoXXyL6pmP";
+const tokenSecret = "I7bN5Vc8ir4wAYEkm0NyX9rkjiI";
 
 let client = new Yelp({
   consumer_key: consumerKey,
