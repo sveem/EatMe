@@ -1,6 +1,7 @@
 body {
-  font-size: 34px;
+  font-size: 24px;
   font-family: Helvetica, Arial, Sans-Serif;
+  background-color: #E5E4E2
 }
 
 .wrapper {
@@ -24,6 +25,7 @@ label {
 
 .title {
 margin: 5px 0 0 0;
+padding-top: 10px;
 }
 
 .dataImage {
@@ -36,6 +38,7 @@ margin: 5px 0 0 0;
 .info {
   margin-top:6px;
   margin-left: 20px;
+  padding-bottom: 10px;
   text-align: justify;
   text-align-last: left;
 }
