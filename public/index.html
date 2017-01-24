@@ -23,15 +23,15 @@
     </select>
     <div class="wrapper">
       <div ng-repeat="business in data.businesses" class="table">
-        <div class="inside-wrapper"> 
+        <!-- <div class="inside-wrapper">  -->
           <b><p class="title">{{ business.name }}, {{ business.location.address.join(', ') }}
             <img src="{{ business.rating_img_url }}"/> 
-            </p></b>
             <a href="{{ business.url }} _blank">  
             <img src="{{ business.image_url }}" class="dataImage"> 
             </a>
+          </p></b>
           <p class="info"> {{ business.snippet_text }}</p>
-        </div>  <!--"inside-wrapper" -->
+       <!--  </div> -->  <!--"inside-wrapper" -->
       </div> <!-- ng-repeat='business in data.businesses' <-->
     </div> <!--  "wrapper"-->
     </div> <!-- "search form"-->
